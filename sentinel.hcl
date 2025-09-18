@@ -58,7 +58,4 @@ policy "always-true-12" {
     enforcement_level = "advisory"
 }
 
-policy "always-true-13" {
-    source = "./always-true.sentinel"
-    enforcement_level = "advisory"
-}
+
