@@ -4,8 +4,7 @@
 import "json"
 
 # Load configuration from external JSON file
-config_data = json.load("./config.json")
-
+config_data = json.decode(file("config/instance_limits_config.json"))
 # Get instance limits from config
 max_instances = config_data.instance_limits.max_instances
 allowed_types = config_data.instance_limits.allowed_instance_types
