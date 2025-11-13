@@ -23,7 +23,7 @@ environment_limits_valid = rule {
     config_data.environments.dev.max_instances < config_data.environments.production.max_instances
 }
 
-# Main rule - just validates the config structure
+# Main rule - just valiaadates the config structure
 main = rule {
     config_is_valid and environment_limits_valid
 }
