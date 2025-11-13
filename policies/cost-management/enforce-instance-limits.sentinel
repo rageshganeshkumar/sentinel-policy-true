@@ -1,11 +1,29 @@
-# Always True aaaPolicy
-# This is a simple Saentinel policy that always passes/returns true
-# Useful for testing or as a placeholder policy
+# Enforce Instance Limits Policy
+# This policy validates configuration loaded from JSON without making any API calls
 
-# Define a simple boolean variable
-always_pass = true
+import "json"
 
-# Main rule that always evaluates to true
+# Load configuration from JSON file
+config_data = json.unmarshal(file("./config.json"))
+
+# Get instance limits from config
+max_instances = config_data.instance_limits.max_instances
+allowed_types = config_data.instance_limits.allowed_instance_types
+restricted_types = config_data.instance_limits.restricted_instance_types
+
+# Simple validation rules based on config
+config_is_valid = rule {
+    max_instances > 0 and
+    length(allowed_types) > 0 and
+    length(restricted_types) >= 0
+}
+
+# Check that dev environment has lower limits than production
+environment_limits_valid = rule {
+    config_data.environments.dev.max_instances < config_data.environments.production.max_instances
+}
+
+# Main rule - just validates the config structure
 main = rule {
-    always_pass
+    config_is_valid and environment_limits_valid
 }

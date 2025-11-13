@@ -1,0 +1,29 @@
+{
+    "instance_limits": {
+        "max_instances": 10,
+        "allowed_instance_types": [
+            "t2.micro",
+            "t2.small",
+            "t2.medium",
+            "t3.micro",
+            "t3.small",
+            "t3.medium"
+        ],
+        "restricted_instance_types": [
+            "m5.24xlarge",
+            "c5.24xlarge",
+            "r5.24xlarge"
+        ]
+    },
+    "environments": {
+        "dev": {
+            "max_instances": 5
+        },
+        "staging": {
+            "max_instances": 8
+        },
+        "production": {
+            "max_instances": 20
+        }
+    }
+}
