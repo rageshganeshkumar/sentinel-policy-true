@@ -3,7 +3,7 @@ policy "prevent-expensive-storage" {
     enforcement_level = "advisory"
 }
 
-module "always-pass" {
-    source = "../modules/always-pass.sentinel"
+policy "require-resource-tagging" {
+    source = "../compliance/require-resource-tagging.sentinel"
+    enforcement_level = "advisory"
 }
-
