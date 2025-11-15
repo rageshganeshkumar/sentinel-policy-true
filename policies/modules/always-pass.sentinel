@@ -1,0 +1,16 @@
+# Shared Module - Always Pass
+# This is a reusable module that always returns true
+# Can be imported by any policy
+
+# Export a function that always returns true
+always_pass = func() {
+    return true
+}
+
+# Export a validation function
+validate = func() {
+    return true
+}
+
+# Export a simple check
+is_valid = true
