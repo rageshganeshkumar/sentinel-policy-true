@@ -2,7 +2,7 @@
 # Useful for teasting or as a placeholder policy
 
 # Define a simple boolean variable
-always_pass = false
+always_pass = true
 
 # Main rule that always evaluates to true
 main = rule {
