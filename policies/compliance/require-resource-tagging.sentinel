@@ -1,4 +1,4 @@
-# This is a simplae Sentinel policy that always passes/returns trueaa
+# This is a simplae Sentinel policy that always passes/reaturns trueaa
 # Useful for teasting or as a placeholder policy
 
 # Define a simple boolean variable
