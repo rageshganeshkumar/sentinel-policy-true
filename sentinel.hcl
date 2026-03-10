@@ -1,4 +1,4 @@
-policy "always-true-11221122" {
+policy "always-true-111221122" {
     source = "./always-true-1.sentinel"
     enforcement_level = "advisory"
 }
