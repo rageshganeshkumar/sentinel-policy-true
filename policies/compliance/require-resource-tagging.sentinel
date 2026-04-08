@@ -1,5 +1,5 @@
 # This is a simplae Sentinel policy that always paaasses/reaturns trueaassaaa
-# Useful for teasting or as a placeholder policy
+# Useful for teasting or as a placeholder policyaaa
 
 # Define a simple boolean variable
 always_pass = false
